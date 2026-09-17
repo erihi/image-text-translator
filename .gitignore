@@ -1,0 +1,52 @@
+# Visual Studio / MSBuild build artifacts
+.vs/
+x64/
+Win32/
+*.obj
+*.pdb
+*.ilk
+*.idb
+*.iobj
+*.ipdb
+*.log
+*.tlog
+*.recipe
+*.vcxproj.user
+*.FileListAbsolute.txt
+
+# Vendored third-party SDK headers (OpenCV, Paddle Inference)
+# These come from the OpenCV / Paddle Inference SDK installs, not authored here.
+i2t/include/paddle/
+i2t/include/internal/
+i2t/include/crypto/
+i2t/include/detail/
+i2t/include/border_interpolate.hpp
+i2t/include/block.hpp
+i2t/include/color.hpp
+i2t/include/emulation.hpp
+i2t/include/filters.hpp
+i2t/include/funcattrib.hpp
+i2t/include/functional.hpp
+i2t/include/reduce.hpp
+i2t/include/saturate_cast.hpp
+i2t/include/scan.hpp
+i2t/include/simd_functions.hpp
+i2t/include/transform.hpp
+i2t/include/type_traits.hpp
+i2t/include/utility.hpp
+i2t/include/vec_distance.hpp
+i2t/include/vec_math.hpp
+i2t/include/vec_traits.hpp
+i2t/include/warp.hpp
+i2t/include/warp_reduce.hpp
+i2t/include/warp_shuffle.hpp
+i2t/include/paddle_analysis_config.h
+i2t/include/paddle_api.h
+i2t/include/paddle_inference_api.h
+i2t/include/paddle_infer_contrib.h
+i2t/include/paddle_infer_declare.h
+i2t/include/paddle_pass_builder.h
+i2t/include/paddle_tensor.h
+
+# OCR model weights (large binary files, download separately - see README)
+i2t/inference/

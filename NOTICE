@@ -1,0 +1,58 @@
+i2t
+Copyright 2026 zsx1244
+
+This product includes software developed as part of this project and
+incorporates modified source code from third-party open-source projects.
+
+================================================================================
+1. PaddleOCR (https://github.com/PaddlePaddle/PaddleOCR)
+================================================================================
+Copyright (c) PaddlePaddle Authors. All Rights Reserved.
+Licensed under the Apache License, Version 2.0.
+http://www.apache.org/licenses/LICENSE-2.0
+
+The following files are adapted from PaddleOCR's official C++ inference
+deployment sample (deploy/cpp_infer):
+
+  i2t/ocr_det.cpp             i2t/include/ocr_det.h
+  i2t/ocr_rec.cpp             i2t/include/ocr_rec.h
+  i2t/postprocess_op.cpp      i2t/include/postprocess_op.h
+  i2t/preprocess_op.cpp       i2t/include/preprocess_op.h
+  i2t/utility.cpp             i2t/include/utility.h
+  i2t/include/args.h          i2t/include/config.h
+  i2t/include/ocr_cls.h       i2t/include/crypto/cipher.h
+  i2t/include/common.hpp
+
+These files have been modified for use in this project (integration with a
+Win32 drag-and-drop UI, translation pipeline, and project-specific build
+configuration). See individual file headers for the original license text.
+
+================================================================================
+2. Clipper (https://sourceforge.net/projects/polyclipping/ by Angus Johnson)
+================================================================================
+Copyright Angus Johnson 2010-2017.
+Licensed under the Boost Software License, Version 1.0.
+http://www.boost.org/LICENSE_1_0.txt
+
+Used unmodified in:
+
+  i2t/clipper.cpp
+  i2t/include/clipper.h
+
+================================================================================
+Build-time / runtime dependencies (NOT included in this repository)
+================================================================================
+This project links against, but does not redistribute, the following
+third-party libraries. See README.md for how to obtain them.
+
+  - OpenCV                  Apache License 2.0
+  - Paddle Inference SDK    Apache License 2.0
+  - CTranslate2             MIT License
+  - SentencePiece           Apache License 2.0
+  - Intel oneDNN / MKL-ML   Apache License 2.0
+  - NVIDIA cuDNN            NVIDIA proprietary SLA (redistribution restricted)
+
+If you build against a machine-translation model (e.g. an NLLB checkpoint
+converted for CTranslate2), check that model's own license before any
+non-personal or commercial use -- Meta's official NLLB checkpoints are
+released under CC-BY-NC 4.0, which prohibits commercial use.
