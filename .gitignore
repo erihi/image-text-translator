@@ -50,3 +50,9 @@ i2t/include/paddle_tensor.h
 
 # OCR model weights (large binary files, download separately - see README)
 i2t/inference/
+
+# Translation model + third-party runtime binaries (download/build separately - see README)
+s2s/nllb_ct2/
+s2s/sentencepiece.dll
+s2s/sentencepiece.lib
+s2s/ctranslate2.dll
