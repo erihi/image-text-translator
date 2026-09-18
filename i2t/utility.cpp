@@ -23,9 +23,8 @@
 
 #include <opencv2/core.hpp>
 #include <opencv2/imgproc.hpp>
-#include <opencv2/highgui.hpp>
 
-// 1. »çÀü ÆÄÀÏ ÀÐ±â
+// 1. ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ð±ï¿½
 std::vector<std::string> Utility::ReadDict(const std::string& path) {
     std::vector<std::string> dict;
     std::ifstream in(path);
@@ -45,7 +44,7 @@ std::vector<std::string> Utility::ReadDict(const std::string& path) {
     return dict;
 }
 
-// 2. Á¤·Ä ºñ±³ ÇÔ¼ö
+// 2. ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ô¼ï¿½
 bool Utility::XsortInt(const std::vector<std::vector<int>>& a, const std::vector<std::vector<int>>& b) {
     return a[0][0] < b[0][0];
 }
@@ -54,7 +53,7 @@ bool Utility::YsortInt(const std::vector<std::vector<int>>& a, const std::vector
     return a[0][1] < b[0][1];
 }
 
-// 3. ¹Ú½º Á¤·Ä ±¸Çö
+// 3. ï¿½Ú½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 std::vector<std::vector<std::vector<int>>> Utility::SortedBoxes(
     const std::vector<std::vector<std::vector<int>>>& boxes) {
 
@@ -71,7 +70,7 @@ std::vector<std::vector<std::vector<int>>> Utility::SortedBoxes(
     return sorted_boxes;
 }
 
-// 4. ÀÌ¹ÌÁö Å©·Ó (Perspective Transform)
+// 4. ï¿½Ì¹ï¿½ï¿½ï¿½ Å©ï¿½ï¿½ (Perspective Transform)
 cv::Mat Utility::GetRotateCropImage(const cv::Mat& img,
     const std::vector<std::vector<int>>& box) {
     cv::Mat image;
